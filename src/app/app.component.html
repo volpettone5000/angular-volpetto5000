@@ -1,0 +1,26 @@
+<button (click)="hideShow()">hide/show</button>
+<ng-container *ngIf="show">
+  <hello name="{{ name }}"></hello>
+  <hello [name]="name"></hello>
+  <p>
+    a <input type="text" [(ngModel)]="a" /><br />
+    b <input type="text" [(ngModel)]="b" /><br />
+    c <input type="text" [(ngModel)]="c" /><br />
+    d <input type="text" [(ngModel)]="d" /><br />
+  </p>
+
+  <br />
+
+  <button (click)="addElementToArray(arr, a)">addElementToArray></button>
+
+  <button (click)="getArrayFromIntegers(a, b, c, d)">
+    getArrayFromIntegers>
+  </button>
+
+  <br />
+  result
+  <div type="text">{{ result | json }}</div>
+  <br />
+</ng-container>
+
+<app-gatto></app-gatto>
